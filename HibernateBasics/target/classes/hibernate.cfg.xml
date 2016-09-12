@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@tssr101:1521:init1</property>
+		<property name="hibernate.connection.username">PPDW_OWNER</property>
+		<property name="hibernate.connection.password">USR_ppd1</property>
+		
+		<!-- Specify session context -->
+		<property name="hibernate.current_session_context_class">
+			org.hibernate.context.internal.ThreadLocalSessionContext
+		</property>
+		
+		<mapping resource="employee.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
